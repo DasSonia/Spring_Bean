@@ -8,7 +8,13 @@ public class DrawingApp {
 		//Triangle triangle = new Triangle();
 		// Dependancy injection used here because new Triangle(); not used
 		ApplicationContext context = new ClassPathXmlApplicationContext("file:src/spring.xml");
-	    Triangle obj = (Triangle) context.getBean("triangle");
-	    obj.getMessage();
+	    
+		Triangle objA = (Triangle) context.getBean("triangle");
+
+	      objA.setMessage("I'm object A");
+	      objA.getMessage();
+
+	      Triangle objB = (Triangle) context.getBean("triangle");
+	      objB.getMessage();
 	}
 }
