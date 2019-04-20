@@ -10,7 +10,7 @@ public class DrawingApp {
 		ApplicationContext context = new ClassPathXmlApplicationContext("file:src/spring.xml");
 	    
 		Triangle objA = (Triangle) context.getBean("triangle");
-
+		
 	      objA.setMessage("I'm object A");
 	      objA.getMessage();
 
