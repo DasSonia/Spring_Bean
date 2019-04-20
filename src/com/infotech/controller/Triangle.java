@@ -1,7 +1,12 @@
 package com.infotech.controller;
 
 public class Triangle {
-	public void draw() {
-		System.out.println("Triangle Drawn");
-	}
+	private String message;
+
+	   public void setMessage(String message){
+	      this.message  = message;
+	   }
+	   public void getMessage(){
+	      System.out.println("Your Message : " + message);
+	   }
 }
