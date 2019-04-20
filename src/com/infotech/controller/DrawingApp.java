@@ -1,6 +1,7 @@
 package com.infotech.controller;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class DrawingApp {
@@ -16,5 +17,6 @@ public class DrawingApp {
 
 	      Triangle objB = (Triangle) context.getBean("triangle");
 	      objB.getMessage();
+	      ((AbstractApplicationContext) context).registerShutdownHook();
 	}
 }

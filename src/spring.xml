@@ -10,7 +10,9 @@ http://www.springframework.org/schema/context/spring-context-4.3.xsd http://www.
     </context:component-scan>
     <context:annotation-config></context:annotation-config>
 
-	<bean id="triangle" class="com.infotech.controller.Triangle" scope = "prototype">
+	<bean id="triangle" class="com.infotech.controller.Triangle" scope = "prototype" 
+	init-method = "init" destroy-method = "destroy"
+	>
       <property name = "message" value = "Hello World!"/>
    </bean>
 
