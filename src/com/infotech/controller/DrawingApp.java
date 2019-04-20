@@ -8,15 +8,15 @@ public class DrawingApp {
 	public static void main(String[] args) {
 		//Triangle triangle = new Triangle();
 		// Dependancy injection used here because new Triangle(); not used
-		ApplicationContext context = new ClassPathXmlApplicationContext("file:src/spring.xml");
-	    
-		Triangle objA = (Triangle) context.getBean("triangle");
+		ApplicationContext context = new ClassPathXmlApplicationContext("file:src/spring2.xml");	    		
 		
-	      objA.setMessage("I'm object A");
-	      objA.getMessage();
+		HelloWorld objA = (HelloWorld) context.getBean("helloWorld");
+	      objA.getMessage1();
+	      objA.getMessage2();
 
-	      Triangle objB = (Triangle) context.getBean("triangle");
-	      objB.getMessage();
-	      ((AbstractApplicationContext) context).registerShutdownHook();
+	      HelloIndia objB = (HelloIndia) context.getBean("helloIndia");
+	      objB.getMessage1();
+	      objB.getMessage2();
+	      objB.getMessage3();
 	}
 }
