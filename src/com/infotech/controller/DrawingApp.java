@@ -6,6 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class DrawingApp {
 	public static void main(String[] args) {
 		//Triangle triangle = new Triangle();
+		// Dependancy injection used here because new Triangle(); not used
 		ApplicationContext context = new ClassPathXmlApplicationContext("file:src/spring.xml");
 	    Triangle obj = (Triangle) context.getBean("triangle");
 	    obj.getMessage();
